@@ -36,7 +36,7 @@ body {
     radial-gradient(circle at 86% 14%, rgba(115, 184, 214, 0.12), transparent 30%),
     linear-gradient(180deg, #070a10 0%, #0b1021 48%, #06070b 100%);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
-  line-height: 1.65;
+  line-height: 1.58;
   text-rendering: optimizeLegibility;
 }
 
@@ -226,19 +226,20 @@ h1,
 h2,
 h3,
 p {
-  overflow-wrap: anywhere;
+  overflow-wrap: break-word;
+  word-break: normal;
 }
 
 .hero h1,
 .page-hero h1 {
-  max-width: 940px;
+  max-width: 840px;
   margin: 0;
   color: #eef8fb;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(3rem, 8vw, 7.8rem);
+  font-size: clamp(2.6rem, 6vw, 5.75rem);
   font-weight: 700;
   letter-spacing: 0;
-  line-height: 0.91;
+  line-height: 0.98;
   text-shadow: 0 18px 60px rgba(0, 0, 0, 0.5);
 }
 
@@ -251,14 +252,14 @@ p {
 
 .hero-subtitle {
   margin: 1.25rem 0 0;
-  font-size: clamp(1.25rem, 2.5vw, 2rem);
-  line-height: 1.25;
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  line-height: 1.35;
 }
 
 .hero-lede,
 .page-hero p:not(.eyebrow) {
   margin: 1.2rem 0 0;
-  font-size: 1.08rem;
+  font-size: 1.02rem;
 }
 
 .button-row {
@@ -444,8 +445,8 @@ p {
   margin: 0;
   color: #eef8fb;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2rem, 4vw, 3.5rem);
-  line-height: 1.05;
+  font-size: clamp(1.7rem, 3vw, 2.75rem);
+  line-height: 1.12;
 }
 
 .section-heading p:not(.eyebrow),
@@ -464,7 +465,7 @@ p {
 .copy-stack {
   display: grid;
   gap: 1rem;
-  font-size: 1.07rem;
+  font-size: 1.02rem;
 }
 
 .card-grid {
@@ -558,7 +559,7 @@ p {
 
 .reality-card h3 {
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(1.6rem, 3vw, 2.35rem);
+  font-size: clamp(1.35rem, 2.4vw, 1.9rem);
 }
 
 .gauge-grid {
@@ -636,7 +637,8 @@ p {
 }
 
 .page-hero h1 {
-  font-size: clamp(2.55rem, 5.6vw, 5.25rem);
+  max-width: 780px;
+  font-size: clamp(2.25rem, 4.7vw, 4rem);
 }
 
 .team-grid {
@@ -695,7 +697,7 @@ p {
   background:
     radial-gradient(circle at 50% 50%, rgba(232, 238, 243, 0.9), transparent 13%),
     linear-gradient(135deg, rgba(6, 151, 183, 0.94), rgba(46, 63, 147, 0.72));
-  font-size: 4rem;
+  font-size: 3.2rem;
   font-weight: 900;
 }
 
@@ -904,7 +906,8 @@ textarea:focus {
 
   .hero h1,
   .page-hero h1 {
-    font-size: clamp(2.45rem, 14vw, 4.2rem);
+    font-size: clamp(2.05rem, 10.5vw, 3.2rem);
+    line-height: 1.03;
   }
 
   .stained-window {
