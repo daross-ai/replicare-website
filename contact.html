@@ -53,12 +53,12 @@
     <section class="section">
       <div class="container form-layout">
         <div class="section-heading align-left">
-          <p class="eyebrow">Static Form Preview</p>
+          <p class="eyebrow">Email Draft Form</p>
           <h2>Draft a message</h2>
-          <p>GitHub Pages has no backend. This form is only a visual draft surface; the working contact option is the email link above.</p>
+          <p>This free static form opens a prepared email draft in your email app. No paid form service or backend is required.</p>
         </div>
 
-        <!-- Static GitHub Pages needs a service such as Formspree or Basin before this form can send. -->
+        <!-- Free GitHub Pages contact flow: JavaScript converts this form into a mailto draft. -->
         <form class="contact-form" action="#" method="post" novalidate>
           <div class="form-row">
             <label for="first-name">First Name</label>
@@ -89,8 +89,8 @@
             <textarea id="message" name="message" rows="7"></textarea>
           </div>
           <div class="form-actions full">
-            <button class="button button-secondary" type="submit">Preview only</button>
-            <p class="form-note" role="status">No backend is connected. Please email hello@replicareai.com.</p>
+            <button class="button button-secondary" type="submit">Open email draft</button>
+            <p class="form-note" role="status">Submits through your email app using hello@replicareai.com.</p>
           </div>
         </form>
       </div>
