@@ -1,34 +1,28 @@
-Replicare AI — Static GitHub Pages site
+# Replicare AI
 
-This repository contains a clean static rebuild of the Replicare AI site using HTML, CSS, and vanilla JavaScript.
+Static GitHub Pages site for **REPLICARE: The House of Passing Light**.
 
-Files:
-- index.html
-- about.html
-- blog.html
-- contact.html
-- styles.css
-- script.js
-- assets/ (placeholders for imagery)
+Replicare AI is an AI-powered game studio building an interactive psychological horror game with recursive narrative design, real-time avatars, generated environments, speech interaction, emotional systems, and ritual puzzle mechanics.
 
-Quick start (VS Code terminal):
+## Files
 
-1. Initialize git
-```
-git init
-git branch -M main
-```
-2. Add files and commit
-```
-git add .
-git commit -m "Initial commit — static site scaffold"
-```
-3. Create GitHub repo (on github.com) and add remote, then push
-```
-git remote add origin https://github.com/<your-username>/<your-repo>.git
-git push -u origin main
-```
+- `index.html`
+- `about.html`
+- `blog.html`
+- `contact.html`
+- `styles.css`
+- `script.js`
 
-GitHub Pages: Enable Pages in repository settings and serve from `main` branch (root). Add a `CNAME` file at the repo root or configure DNS to point `replicareai.com` to GitHub Pages (see instructions in project README or below).
+## Local preview
 
-License: Replace with your preferred license.
+Open `index.html` directly in a browser. The site is plain HTML, CSS, and vanilla JavaScript with no build step.
+
+## Deploy
+
+Serve from the repository root with GitHub Pages.
+
+```bash
+git add index.html about.html blog.html contact.html styles.css script.js README.md
+git commit -m "Reposition Replicare site for House of Passing Light"
+git push
+```

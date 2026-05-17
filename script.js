@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       event.preventDefault();
       const note = form.querySelector(".form-note");
       if (note) {
-        note.textContent = "This static preview cannot send yet. Please email hello@replicareai.com.";
+        note.textContent = "This static preview cannot send. Please email hello@replicareai.com.";
       }
     });
   });
