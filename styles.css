@@ -397,25 +397,44 @@ p {
   animation: witness-breathe 7s ease-in-out infinite;
 }
 
+.orbit-path,
 .loop-ring {
   position: absolute;
+  transform-origin: center;
+}
+
+.orbit-path {
+  width: 74%;
+  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+}
+
+.orbit-white {
+  animation: orbit-clockwise 32s linear infinite;
+}
+
+.orbit-blue {
+  animation: orbit-counter 26s linear infinite;
+}
+
+.loop-ring {
   border: 1px solid rgba(184, 233, 255, 0.5);
   border-radius: 50%;
   box-shadow: 0 0 28px rgba(126, 217, 238, 0.08);
 }
 
 .ring-one {
-  width: 72%;
+  width: 138%;
   aspect-ratio: 1;
-  animation: clockwise-spin 34s linear infinite;
+  transform: scaleY(0.36) rotate(8deg);
 }
 
 .ring-two {
-  width: 46%;
+  width: 88%;
   aspect-ratio: 1;
   border-color: rgba(46, 63, 147, 0.78);
-  transform: rotate(35deg) scaleY(0.55);
-  animation: counter-spin 26s linear infinite;
+  transform: scaleY(0.55) rotate(52deg);
 }
 
 .visual-caption {
@@ -899,15 +918,15 @@ p {
   }
 }
 
-@keyframes clockwise-spin {
+@keyframes orbit-clockwise {
   to {
     transform: rotate(360deg);
   }
 }
 
-@keyframes counter-spin {
+@keyframes orbit-counter {
   to {
-    transform: rotate(-325deg) scaleY(0.55);
+    transform: rotate(-360deg);
   }
 }
 
