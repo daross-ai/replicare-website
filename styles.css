@@ -649,11 +649,11 @@ p {
 
 .member-photo {
   display: block;
-  width: 100%;
-  aspect-ratio: 4 / 5;
+  width: 112px;
+  aspect-ratio: 1;
   margin-bottom: 1.1rem;
-  border: 1px solid rgba(126, 217, 238, 0.32);
-  border-radius: var(--radius-sm);
+  border: 1px solid rgba(126, 217, 238, 0.4);
+  border-radius: 50%;
   object-fit: cover;
   object-position: center top;
   background: rgba(232, 238, 243, 0.06);
@@ -679,10 +679,38 @@ p {
   grid-column: 1 / -1;
 }
 
+.long-post {
+  display: block;
+}
+
 .post-card {
   display: grid;
   grid-template-columns: minmax(240px, 0.7fr) minmax(0, 1.3fr);
   overflow: hidden;
+}
+
+.post-sections {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.post-sections section {
+  padding: 1rem;
+  border: 1px solid rgba(232, 238, 243, 0.12);
+  border-radius: var(--radius-sm);
+  background: rgba(232, 238, 243, 0.045);
+}
+
+.post-sections h3 {
+  margin: 0 0 0.45rem;
+  color: #eef8fb;
+  line-height: 1.18;
+}
+
+.post-sections p {
+  margin: 0;
 }
 
 .post-media {
@@ -943,6 +971,7 @@ textarea:focus {
   .dev-notes-grid,
   .image-strip,
   .post-card,
+  .post-sections,
   .contact-form {
     grid-template-columns: 1fr;
   }
