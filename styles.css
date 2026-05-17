@@ -376,16 +376,6 @@ p {
   transition: transform 180ms ease;
 }
 
-.stained-window::after {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  content: "";
-  background: linear-gradient(105deg, transparent 34%, rgba(232, 238, 243, 0.18) 48%, transparent 61%);
-  transform: translateX(-120%);
-  animation: glass-sheen 9s ease-in-out infinite;
-}
-
 .origin-light {
   position: absolute;
   width: 34%;
@@ -393,6 +383,7 @@ p {
   border-radius: 50%;
   background: radial-gradient(circle, #f4fbff 0 8%, #7ed9ee 9% 18%, rgba(6, 151, 183, 0.16) 19% 48%, transparent 49%);
   box-shadow: 0 0 90px rgba(126, 217, 238, 0.4);
+  animation: origin-pulse 8s ease-in-out infinite;
 }
 
 .witness-eye {
@@ -403,6 +394,7 @@ p {
   border-radius: 50%;
   background: radial-gradient(circle at center, rgba(126, 217, 238, 0.92) 0 4%, rgba(8, 7, 10, 0.8) 5% 12%, transparent 13%);
   transform: rotate(-8deg);
+  animation: witness-breathe 7s ease-in-out infinite;
 }
 
 .loop-ring {
@@ -415,7 +407,7 @@ p {
 .ring-one {
   width: 72%;
   aspect-ratio: 1;
-  animation: slow-spin 32s linear infinite;
+  animation: clockwise-spin 34s linear infinite;
 }
 
 .ring-two {
@@ -423,7 +415,7 @@ p {
   aspect-ratio: 1;
   border-color: rgba(46, 63, 147, 0.78);
   transform: rotate(35deg) scaleY(0.55);
-  animation: reverse-spin 26s linear infinite;
+  animation: counter-spin 26s linear infinite;
 }
 
 .visual-caption {
@@ -554,22 +546,6 @@ p {
   transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
 }
 
-.reality-card::after,
-.glass-card::after,
-.tech-card::after,
-.note-card::after,
-.team-card::after,
-.post-card::after {
-  position: absolute;
-  inset: 0;
-  pointer-events: none;
-  content: "";
-  background: linear-gradient(120deg, transparent, rgba(126, 217, 238, 0.08), transparent);
-  opacity: 0;
-  transform: translateX(-30%);
-  transition: opacity 180ms ease, transform 220ms ease;
-}
-
 .reality-card:hover,
 .glass-card:hover,
 .tech-card:hover,
@@ -578,16 +554,6 @@ p {
 .post-card:hover {
   transform: translateY(-4px);
   border-color: rgba(126, 217, 238, 0.38);
-}
-
-.reality-card:hover::after,
-.glass-card:hover::after,
-.tech-card:hover::after,
-.note-card:hover::after,
-.team-card:hover::after,
-.post-card:hover::after {
-  opacity: 1;
-  transform: translateX(30%);
 }
 
 .mansion-card {
@@ -907,25 +873,39 @@ p {
   }
 }
 
-@keyframes glass-sheen {
+@keyframes origin-pulse {
   0%,
-  62% {
-    transform: translateX(-120%);
+  100% {
+    transform: scale(1);
+    filter: hue-rotate(0deg);
   }
 
-  78%,
-  100% {
-    transform: translateX(120%);
+  50% {
+    transform: scale(1.08);
+    filter: hue-rotate(18deg);
   }
 }
 
-@keyframes slow-spin {
+@keyframes witness-breathe {
+  0%,
+  100% {
+    border-color: rgba(232, 238, 243, 0.42);
+    filter: hue-rotate(0deg) saturate(1);
+  }
+
+  50% {
+    border-color: rgba(126, 217, 238, 0.72);
+    filter: hue-rotate(22deg) saturate(1.25);
+  }
+}
+
+@keyframes clockwise-spin {
   to {
     transform: rotate(360deg);
   }
 }
 
-@keyframes reverse-spin {
+@keyframes counter-spin {
   to {
     transform: rotate(-325deg) scaleY(0.55);
   }
