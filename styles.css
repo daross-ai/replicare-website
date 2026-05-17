@@ -414,10 +414,6 @@ p {
   animation: orbit-clockwise 32s linear infinite;
 }
 
-.orbit-blue {
-  animation: orbit-counter 26s linear infinite;
-}
-
 .loop-ring {
   border: 1px solid rgba(184, 233, 255, 0.5);
   border-radius: 50%;
@@ -428,13 +424,6 @@ p {
   width: 138%;
   aspect-ratio: 1;
   transform: scaleY(0.36) rotate(8deg);
-}
-
-.ring-two {
-  width: 88%;
-  aspect-ratio: 1;
-  border-color: rgba(46, 63, 147, 0.78);
-  transform: scaleY(0.55) rotate(52deg);
 }
 
 .visual-caption {
@@ -921,12 +910,6 @@ p {
 @keyframes orbit-clockwise {
   to {
     transform: rotate(360deg);
-  }
-}
-
-@keyframes orbit-counter {
-  to {
-    transform: rotate(-360deg);
   }
 }
 
