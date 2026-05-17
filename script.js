@@ -10,31 +10,14 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  document.querySelectorAll(".contact-form").forEach((form) => {
-    form.addEventListener("submit", (event) => {
-      event.preventDefault();
-      const data = new FormData(form);
-      const firstName = data.get("first-name") || "";
-      const lastName = data.get("last-name") || "";
-      const email = data.get("email") || "";
-      const phone = data.get("phone") || "";
-      const jobTitle = data.get("job-title") || "";
-      const subject = data.get("subject") || "Replicare inquiry";
-      const message = data.get("message") || "";
-      const body = [
-        `Name: ${firstName} ${lastName}`.trim(),
-        `Email: ${email}`,
-        `Phone: ${phone}`,
-        `Job title: ${jobTitle}`,
-        "",
-        "Message:",
-        message
-      ].join("\n");
-      const note = form.querySelector(".form-note");
-      if (note) {
-        note.textContent = "Opening your email app with a prepared draft.";
-      }
-      window.location.href = `mailto:hello@replicareai.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+  const visual = document.querySelector(".house-visual");
+  if (visual && window.matchMedia("(pointer: fine)").matches) {
+    visual.addEventListener("pointermove", (event) => {
+      const rect = visual.getBoundingClientRect();
+      const x = ((event.clientX - rect.left) / rect.width - 0.5).toFixed(3);
+      const y = ((event.clientY - rect.top) / rect.height - 0.5).toFixed(3);
+      visual.style.setProperty("--mx", x);
+      visual.style.setProperty("--my", y);
     });
-  });
+  }
 });

@@ -53,6 +53,19 @@ body::before {
   mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.75), transparent 70%);
 }
 
+body::after {
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  content: "";
+  background:
+    radial-gradient(circle at 20% 30%, rgba(126, 217, 238, 0.05), transparent 18%),
+    radial-gradient(circle at 80% 20%, rgba(46, 63, 147, 0.08), transparent 22%);
+  opacity: 0.75;
+  animation: ambient-drift 18s ease-in-out infinite alternate;
+}
+
 a {
   color: inherit;
 }
@@ -322,6 +335,8 @@ p {
   background: rgba(6, 7, 11, 0.72);
   box-shadow: 0 18px 48px rgba(0, 0, 0, 0.32);
   backdrop-filter: blur(12px);
+  transform: translate(calc(var(--mx, 0) * -12px), calc(var(--my, 0) * -12px));
+  transition: transform 180ms ease;
 }
 
 .hero-logo-card img {
@@ -346,6 +361,18 @@ p {
     linear-gradient(135deg, rgba(7, 42, 63, 0.92), rgba(10, 18, 34, 0.95) 52%, rgba(188, 231, 255, 0.16));
   background-size: 74px 74px, 74px 74px, auto, auto;
   box-shadow: var(--shadow), inset 0 0 90px rgba(0, 0, 0, 0.5);
+  transform: perspective(1000px) rotateX(calc(var(--my, 0) * -3deg)) rotateY(calc(var(--mx, 0) * 4deg));
+  transition: transform 180ms ease;
+}
+
+.stained-window::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background: linear-gradient(105deg, transparent 35%, rgba(232, 238, 243, 0.1) 48%, transparent 60%);
+  transform: translateX(-120%);
+  animation: glass-sheen 9s ease-in-out infinite;
 }
 
 .origin-light {
@@ -376,6 +403,7 @@ p {
 .ring-one {
   width: 72%;
   aspect-ratio: 1;
+  animation: slow-spin 32s linear infinite;
 }
 
 .ring-two {
@@ -383,6 +411,7 @@ p {
   aspect-ratio: 1;
   border-color: rgba(46, 63, 147, 0.56);
   transform: rotate(35deg) scaleY(0.55);
+  animation: reverse-spin 26s linear infinite;
 }
 
 .visual-caption {
@@ -457,8 +486,7 @@ p {
 .note-card p,
 .post-card p,
 .team-card span,
-.contact-card li,
-.form-note {
+.contact-card li {
   color: var(--ash);
 }
 
@@ -486,7 +514,6 @@ p {
 .team-card,
 .post-card,
 .contact-card,
-.contact-form,
 .loop-panel {
   border: 1px solid var(--line);
   border-radius: var(--radius);
@@ -510,7 +537,25 @@ p {
 .note-card,
 .team-card,
 .post-card {
+  position: relative;
+  overflow: hidden;
   transition: transform 180ms ease, border-color 180ms ease, box-shadow 180ms ease;
+}
+
+.reality-card::after,
+.glass-card::after,
+.tech-card::after,
+.note-card::after,
+.team-card::after,
+.post-card::after {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  content: "";
+  background: linear-gradient(120deg, transparent, rgba(126, 217, 238, 0.08), transparent);
+  opacity: 0;
+  transform: translateX(-30%);
+  transition: opacity 180ms ease, transform 220ms ease;
 }
 
 .reality-card:hover,
@@ -521,6 +566,16 @@ p {
 .post-card:hover {
   transform: translateY(-4px);
   border-color: rgba(126, 217, 238, 0.38);
+}
+
+.reality-card:hover::after,
+.glass-card:hover::after,
+.tech-card:hover::after,
+.note-card:hover::after,
+.team-card:hover::after,
+.post-card:hover::after {
+  opacity: 1;
+  transform: translateX(30%);
 }
 
 .mansion-card {
@@ -755,8 +810,7 @@ p {
   padding: clamp(1.4rem, 3vw, 2rem);
 }
 
-.contact-hero-grid,
-.form-layout {
+.contact-hero-grid {
   display: grid;
   grid-template-columns: minmax(0, 1fr) minmax(320px, 0.72fr);
   gap: clamp(2rem, 6vw, 4rem);
@@ -767,8 +821,7 @@ p {
   margin-top: 1.7rem;
 }
 
-.contact-card,
-.contact-form {
+.contact-card {
   padding: clamp(1.35rem, 3vw, 2rem);
 }
 
@@ -794,62 +847,6 @@ p {
   background: var(--mansion-soft);
   box-shadow: 0 0 12px rgba(126, 217, 238, 0.82);
   content: "";
-}
-
-.contact-form {
-  display: grid;
-  grid-template-columns: repeat(2, minmax(0, 1fr));
-  gap: 1rem;
-}
-
-.form-row {
-  display: grid;
-  gap: 0.45rem;
-}
-
-.form-row.full,
-.form-actions.full {
-  grid-column: 1 / -1;
-}
-
-label {
-  color: var(--bone);
-  font-weight: 850;
-}
-
-input,
-textarea {
-  width: 100%;
-  border: 1px solid rgba(232, 238, 243, 0.18);
-  border-radius: var(--radius-sm);
-  background: rgba(6, 7, 11, 0.72);
-  color: var(--bone);
-  font: inherit;
-  padding: 0.85rem 0.95rem;
-  transition: border-color 180ms ease, box-shadow 180ms ease, background 180ms ease;
-}
-
-textarea {
-  resize: vertical;
-}
-
-input:focus,
-textarea:focus {
-  border-color: var(--institute);
-  background: rgba(6, 7, 11, 0.92);
-  box-shadow: 0 0 0 4px rgba(184, 233, 255, 0.14);
-  outline: none;
-}
-
-.form-actions {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1rem;
-}
-
-.form-actions button {
-  cursor: pointer;
 }
 
 .site-footer {
@@ -888,12 +885,45 @@ textarea:focus {
   color: var(--mansion-soft);
 }
 
+@keyframes ambient-drift {
+  from {
+    transform: translate3d(-1.5rem, -1rem, 0) scale(1);
+  }
+
+  to {
+    transform: translate3d(1.5rem, 1rem, 0) scale(1.04);
+  }
+}
+
+@keyframes glass-sheen {
+  0%,
+  62% {
+    transform: translateX(-120%);
+  }
+
+  78%,
+  100% {
+    transform: translateX(120%);
+  }
+}
+
+@keyframes slow-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes reverse-spin {
+  to {
+    transform: rotate(-325deg) scaleY(0.55);
+  }
+}
+
 @media (max-width: 1040px) {
   .hero-grid,
   .split-section,
   .physician-grid,
-  .contact-hero-grid,
-  .form-layout {
+  .contact-hero-grid {
     grid-template-columns: 1fr;
   }
 
@@ -972,8 +1002,7 @@ textarea:focus {
   .about-grid,
   .dev-notes-grid,
   .image-strip,
-  .post-card,
-  .contact-form {
+  .post-card {
     grid-template-columns: 1fr;
   }
 
@@ -981,7 +1010,6 @@ textarea:focus {
     min-height: 210px;
   }
 
-  .form-actions,
   .footer-grid {
     align-items: flex-start;
     flex-direction: column;
@@ -992,6 +1020,7 @@ textarea:focus {
   *,
   *::before,
   *::after {
+    animation: none !important;
     scroll-behavior: auto !important;
     transition: none !important;
   }
