@@ -177,10 +177,10 @@ a {
 }
 
 .hero {
-  min-height: calc(100vh - 78px);
+  min-height: auto;
   display: grid;
   align-items: center;
-  padding: clamp(5rem, 9vw, 8rem) 0;
+  padding: clamp(4rem, 7vw, 6rem) 0;
 }
 
 .hero::before,
@@ -208,7 +208,7 @@ a {
   position: relative;
   z-index: 1;
   display: grid;
-  grid-template-columns: minmax(0, 1.04fr) minmax(340px, 0.96fr);
+  grid-template-columns: minmax(0, 0.9fr) minmax(360px, 1.1fr);
   align-items: center;
   gap: clamp(2rem, 6vw, 5rem);
 }
@@ -232,11 +232,11 @@ p {
 
 .hero h1,
 .page-hero h1 {
-  max-width: 840px;
+  max-width: 760px;
   margin: 0;
   color: #eef8fb;
   font-family: Georgia, "Times New Roman", serif;
-  font-size: clamp(2.6rem, 6vw, 5.75rem);
+  font-size: clamp(2.35rem, 4.6vw, 4.65rem);
   font-weight: 700;
   letter-spacing: 0;
   line-height: 0.98;
@@ -246,7 +246,7 @@ p {
 .hero-subtitle,
 .hero-lede,
 .page-hero p:not(.eyebrow) {
-  max-width: 760px;
+  max-width: 680px;
   color: #bac8d2;
 }
 
@@ -334,7 +334,7 @@ p {
 .stained-window {
   position: relative;
   display: grid;
-  min-height: 520px;
+  min-height: 460px;
   place-items: center;
   overflow: hidden;
   border: 1px solid rgba(232, 238, 243, 0.18);
@@ -648,19 +648,15 @@ p {
 }
 
 .member-photo {
-  display: grid;
-  width: 112px;
-  aspect-ratio: 1;
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
   margin-bottom: 1.1rem;
-  place-items: center;
-  border: 1px solid rgba(126, 217, 238, 0.4);
-  border-radius: 50%;
-  color: #061017;
-  background:
-    radial-gradient(circle at 50% 38%, #eaf8fd 0 7%, transparent 8%),
-    linear-gradient(135deg, var(--mansion-soft), var(--institute));
-  font-size: 1.6rem;
-  font-weight: 900;
+  border: 1px solid rgba(126, 217, 238, 0.32);
+  border-radius: var(--radius-sm);
+  object-fit: cover;
+  object-position: center top;
+  background: rgba(232, 238, 243, 0.06);
 }
 
 .team-card p {
@@ -690,15 +686,39 @@ p {
 }
 
 .post-media {
-  display: grid;
+  display: block;
+  margin: 0;
   min-height: 280px;
-  place-items: center;
+  overflow: hidden;
   color: #061017;
   background:
     radial-gradient(circle at 50% 50%, rgba(232, 238, 243, 0.9), transparent 13%),
     linear-gradient(135deg, rgba(6, 151, 183, 0.94), rgba(46, 63, 147, 0.72));
-  font-size: 3.2rem;
-  font-weight: 900;
+}
+
+.post-media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 280px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.image-strip {
+  grid-column: 1 / -1;
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.image-strip img {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  object-fit: cover;
+  box-shadow: var(--shadow);
 }
 
 .post-body {
@@ -906,12 +926,12 @@ textarea:focus {
 
   .hero h1,
   .page-hero h1 {
-    font-size: clamp(2.05rem, 10.5vw, 3.2rem);
+    font-size: clamp(2rem, 9vw, 3rem);
     line-height: 1.03;
   }
 
   .stained-window {
-    min-height: 360px;
+    min-height: 320px;
   }
 
   .reality-grid,
@@ -921,6 +941,7 @@ textarea:focus {
   .team-grid,
   .about-grid,
   .dev-notes-grid,
+  .image-strip,
   .post-card,
   .contact-form {
     grid-template-columns: 1fr;
