@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Contact — Replicare AI</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand"><img src="assets/logo.png" alt="Replicare AI logo" class="logo">Replicare AI</a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <button id="nav-toggle-contact" aria-expanded="false" aria-controls="nav-list-contact">Menu</button>
+        <ul id="nav-list-contact" class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h1>Contact</h1>
+    <p>Use the form below to prepare your message. This is a static site—connect a form provider (Formspree, Netlify Forms, etc.) to receive messages.</p>
+
+    <!-- TODO: Hook this form up to Formspree/Netlify Forms or another provider -->
+    <form class="contact-form" action="#" method="POST" novalidate>
+      <div class="row">
+        <label>First Name<input name="first" type="text" placeholder="First name"></label>
+        <label>Last Name<input name="last" type="text" placeholder="Last name"></label>
+      </div>
+      <div class="row">
+        <label>Email<input name="email" type="email" placeholder="you@example.com"></label>
+        <label>Phone<input name="phone" type="tel" placeholder="(555) 555-5555"></label>
+      </div>
+      <div class="row">
+        <label>Job title<input name="job" type="text" placeholder="Job title"></label>
+        <label>Subject<input name="subject" type="text" placeholder="Subject"></label>
+      </div>
+      <label>Message<textarea name="message" rows="6" placeholder="Write your message here..."></textarea></label>
+      <p>Or email us directly: <a href="mailto:hello@replicareai.com">hello@replicareai.com</a></p>
+      <button type="submit" disabled>Send (connect a form provider)</button>
+    </form>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>&copy; Replicare AI</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
