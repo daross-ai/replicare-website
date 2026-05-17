@@ -1,13 +1,22 @@
-// Minimal JS: mobile nav toggle
-function makeToggles(){
-  document.querySelectorAll('#nav-toggle, [id^="nav-toggle-"]').forEach(btn=>{
-    const targetId = btn.getAttribute('aria-controls') || 'nav-list';
-    const nav = document.getElementById(targetId);
-    btn.addEventListener('click', ()=>{
-      const expanded = btn.getAttribute('aria-expanded') === 'true';
-      btn.setAttribute('aria-expanded', String(!expanded));
-      nav.classList.toggle('show');
+document.addEventListener("DOMContentLoaded", () => {
+  const toggle = document.querySelector(".nav-toggle");
+  const nav = document.getElementById("site-nav");
+
+  if (toggle && nav) {
+    toggle.addEventListener("click", () => {
+      const isOpen = toggle.getAttribute("aria-expanded") === "true";
+      toggle.setAttribute("aria-expanded", String(!isOpen));
+      nav.classList.toggle("is-open", !isOpen);
+    });
+  }
+
+  document.querySelectorAll(".contact-form").forEach((form) => {
+    form.addEventListener("submit", (event) => {
+      event.preventDefault();
+      const note = form.querySelector(".form-note");
+      if (note) {
+        note.textContent = "This static preview cannot send yet. Please email hello@replicareai.com.";
+      }
     });
   });
-}
-window.addEventListener('DOMContentLoaded', makeToggles);
+});

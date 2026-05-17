@@ -2,41 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Blog — Replicare AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Insights from Replicare AI on immersive training, AI, VR, and healthcare simulation.">
+  <title>Blog | Replicare AI</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand"><img src="assets/logo.png" alt="Replicare AI logo" class="logo">Replicare AI</a>
+      <a class="brand" href="index.html" aria-label="Replicare AI home">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <span class="brand-text">Replicare AI</span>
+      </a>
       <nav class="main-nav" aria-label="Main navigation">
-        <button id="nav-toggle-blog" aria-expanded="false" aria-controls="nav-list-blog">Menu</button>
-        <ul id="nav-list-blog" class="nav-list">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span>Menu</span>
+        </button>
+        <ul class="nav-list" id="site-nav">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="blog.html">Blog</a></li>
+          <li><a href="blog.html" aria-current="page">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <main class="container">
-    <h1>Blog</h1>
-    <section class="posts">
-      <article class="post-card">
-        <h2>This Technology is Unreal!</h2>
-        <p class="meta">Oct 28, 2023 — nakunkle</p>
-        <p class="excerpt">This October, we visited New Orleans to attend the technology event Unrealfest 2023. What a wonderful time we had.</p>
-        <a class="read-more" href="#">Read more</a>
-      </article>
+  <main>
+    <section class="page-hero">
+      <div class="container narrow">
+        <p class="eyebrow">Replicare AI insights</p>
+        <h1>Ideas from the intersection of healthcare, AI, and immersive simulation.</h1>
+        <p>Updates on the technologies, events, and product thinking shaping personalized virtual training.</p>
+      </div>
+    </section>
+
+    <section class="section section-light">
+      <div class="container blog-layout">
+        <article class="post-card">
+          <div class="post-media" aria-hidden="true">
+            <span>VR</span>
+          </div>
+          <div class="post-body">
+            <p class="post-meta">Oct 28, 2023 / nakunkle</p>
+            <h2>This Technology is Unreal!</h2>
+            <p>This October, we visited New Orleans to attend the technology event Unrealfest 2023. What a wonderful time we had.</p>
+            <a class="text-link" href="contact.html">Discuss immersive training</a>
+          </div>
+        </article>
+
+        <aside class="insight-panel">
+          <p class="eyebrow">Coming soon</p>
+          <h2>More insights coming soon</h2>
+          <p>We are preparing more updates on virtual training design, healthcare simulation, and AI-assisted practice environments.</p>
+        </aside>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; Replicare AI</p>
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">R</span>
+          <span class="brand-text">Replicare AI</span>
+        </a>
+        <p>Immersive, personalized simulation training for healthcare and care teams.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </footer>
 

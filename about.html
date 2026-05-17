@@ -2,19 +2,25 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>About — Replicare AI</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn about the Replicare AI team, mission, values, and approach to safer immersive training.">
+  <title>About | Replicare AI</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand"><img src="assets/logo.png" alt="Replicare AI logo" class="logo">Replicare AI</a>
+      <a class="brand" href="index.html" aria-label="Replicare AI home">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <span class="brand-text">Replicare AI</span>
+      </a>
       <nav class="main-nav" aria-label="Main navigation">
-        <button id="nav-toggle-about" aria-expanded="false" aria-controls="nav-list-about">Menu</button>
-        <ul id="nav-list-about" class="nav-list">
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span>Menu</span>
+        </button>
+        <ul class="nav-list" id="site-nav">
           <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
+          <li><a href="about.html" aria-current="page">About</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
         </ul>
@@ -22,68 +28,94 @@
     </div>
   </header>
 
-  <main class="container">
-    <section>
-      <h1>Meet the Team</h1>
-      <p class="lead">A small, passionate team, we push for high-quality, personalized solutions in everything we do.</p>
-      <div class="team-grid">
-        <article class="member">
-          <img src="assets/catherine-headshot.jpg" alt="Dr. Fang">
-          <h3>Dr. Fang</h3>
-          <p>CEO</p>
-        </article>
-        <article class="member">
-          <img src="assets/dominic-headshot.jpg" alt="Dominic Ross">
-          <h3>Dominic Ross</h3>
-          <p>CTO</p>
-        </article>
-        <article class="member">
-          <img src="assets/neal-headshot.jpg" alt="Neal Kunkle">
-          <h3>Neal Kunkle</h3>
-          <p>CPO</p>
-        </article>
-        <article class="member">
-          <img src="assets/june-kong.jpg" alt="Xue-Jun (June) Kong">
-          <h3>Xue-Jun (June) Kong, M.D.</h3>
-          <p>Expert Advisor</p>
-        </article>
+  <main>
+    <section class="page-hero">
+      <div class="container narrow">
+        <p class="eyebrow">About Replicare AI</p>
+        <h1>Building immersive practice for the moments care teams cannot afford to improvise.</h1>
+        <p>Replicare AI brings healthcare expertise, product design, and immersive technology together to create personalized situational training that is realistic, accessible, and safer to repeat.</p>
       </div>
     </section>
 
-    <section>
-      <h2>Our Mission</h2>
-      <p>We create personalized situational training to improve outcomes and safety.</p>
+    <section class="section section-light">
+      <div class="container split-section">
+        <div>
+          <p class="eyebrow">Our mission</p>
+          <h2>Help people prepare for complex care scenarios before they happen.</h2>
+        </div>
+        <p class="large-copy">We design simulation-based training environments that make it easier for learners to build confidence, practice communication, and develop consistent responses in realistic situations. Our goal is to improve readiness while reducing avoidable risk in care settings.</p>
+      </div>
     </section>
 
-    <section>
-      <h2>Core Values</h2>
-      <ul>
-        <li>Quality</li>
-        <li>Personalization</li>
-        <li>Safety</li>
-        <li>Accessibility</li>
-      </ul>
+    <section class="section section-muted">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Meet the team</p>
+          <h2>Focused leadership across care, product, and technology.</h2>
+        </div>
+        <div class="team-grid">
+          <article class="team-card">
+            <div class="member-photo" aria-hidden="true">DF</div>
+            <h3>Dr. Fang</h3>
+            <p>CEO</p>
+          </article>
+          <article class="team-card">
+            <div class="member-photo" aria-hidden="true">DR</div>
+            <h3>Dominic Ross</h3>
+            <p>CTO</p>
+          </article>
+          <article class="team-card">
+            <div class="member-photo" aria-hidden="true">NK</div>
+            <h3>Neal Kunkle</h3>
+            <p>CPO</p>
+          </article>
+          <article class="team-card">
+            <div class="member-photo" aria-hidden="true">JK</div>
+            <h3>Xue-Jun (June) Kong, M.D.</h3>
+            <p>Expert Advisor</p>
+          </article>
+        </div>
+      </div>
     </section>
 
-    <section>
-      <h2>Safety</h2>
-      <p>Safety is central to our design and implementation of simulations.</p>
-    </section>
-
-    <section>
-      <h2>Personalized Care</h2>
-      <p>We tailor solutions to individual and organizational needs.</p>
-    </section>
-
-    <section>
-      <h2>Accessibility</h2>
-      <p>We design interfaces with accessibility and inclusivity in mind.</p>
+    <section class="section section-light">
+      <div class="container">
+        <div class="section-heading">
+          <p class="eyebrow">Core values</p>
+          <h2>Principles that shape every training environment.</h2>
+        </div>
+        <div class="card-grid three-column">
+          <article class="value-card">
+            <h3>Safety</h3>
+            <p>We create practice spaces where learners can repeat difficult situations, receive guidance, and improve without real-world harm.</p>
+          </article>
+          <article class="value-card">
+            <h3>Personalized Care</h3>
+            <p>Training should reflect the learner, the care context, and the people involved. Replicare AI is built around tailored scenarios.</p>
+          </article>
+          <article class="value-card">
+            <h3>Accessibility</h3>
+            <p>Immersive practice should be easier to access across teams, locations, and levels of experience.</p>
+          </article>
+        </div>
+      </div>
     </section>
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; Replicare AI</p>
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">R</span>
+          <span class="brand-text">Replicare AI</span>
+        </a>
+        <p>Immersive, personalized simulation training for healthcare and care teams.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="blog.html">Blog</a>
+        <a href="contact.html">Contact</a>
+      </nav>
     </div>
   </footer>
 

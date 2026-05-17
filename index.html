@@ -2,18 +2,24 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Replicare AI — Personalized Situational Training</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Replicare AI creates immersive, personalized simulation-based training environments for healthcare and care teams.">
+  <title>Replicare AI | Personalized Situational Training</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header class="site-header">
     <div class="container header-inner">
-      <a href="index.html" class="brand"><img src="assets/logo.png" alt="Replicare AI logo" class="logo">Replicare AI</a>
+      <a class="brand" href="index.html" aria-label="Replicare AI home">
+        <span class="brand-mark" aria-hidden="true">R</span>
+        <span class="brand-text">Replicare AI</span>
+      </a>
       <nav class="main-nav" aria-label="Main navigation">
-        <button id="nav-toggle" aria-expanded="false" aria-controls="nav-list">Menu</button>
-        <ul id="nav-list" class="nav-list">
-          <li><a href="index.html">Home</a></li>
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+          <span>Menu</span>
+        </button>
+        <ul class="nav-list" id="site-nav">
+          <li><a href="index.html" aria-current="page">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="blog.html">Blog</a></li>
           <li><a href="contact.html">Contact</a></li>
@@ -23,69 +29,126 @@
   </header>
 
   <main>
-    <section class="hero" id="home-hero">
+    <section class="hero home-hero">
       <div class="container hero-grid">
-        <div class="hero-text">
+        <div class="hero-copy">
+          <p class="eyebrow">AI-powered immersive simulation</p>
           <h1>Personalized Situational Training from Anywhere</h1>
-          <p class="sub">with interactive virtual environments</p>
-          <a class="cta" href="contact.html">Get in touch</a>
-          <ul class="features-list" aria-label="Key features">
-            <li>3D Scene Creation</li>
-            <li>Interactive Models</li>
-            <li>Personalized Avatars</li>
-            <li>Expert Support</li>
-          </ul>
+          <p class="hero-subtitle">with interactive virtual environments</p>
+          <p class="hero-lede">Replicare AI creates immersive, personalized simulation-based training environments that help healthcare teams, caregivers, and learners practice complex real-world scenarios before they happen.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="contact.html">Get in touch</a>
+            <a class="button button-secondary" href="about.html">Learn more</a>
+          </div>
         </div>
-        <div class="hero-media">
-          <img src="assets/hero-vr.jpg" alt="Virtual reality training illustration">
+        <div class="hero-visual" aria-label="Immersive healthcare simulation product preview">
+          <div class="simulation-panel">
+            <div class="panel-top">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+            <div class="scene-stage">
+              <div class="avatar-orbit orbit-one"></div>
+              <div class="avatar-orbit orbit-two"></div>
+              <div class="avatar-card">
+                <span class="avatar-pulse"></span>
+                <strong>Adaptive VR Scenario</strong>
+                <small>Care response simulation</small>
+              </div>
+            </div>
+            <div class="metric-strip">
+              <div>
+                <strong>3D</strong>
+                <span>Scene mapping</span>
+              </div>
+              <div>
+                <strong>AI</strong>
+                <span>Persona logic</span>
+              </div>
+              <div>
+                <strong>VR</strong>
+                <span>Practice loop</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
 
-    <section class="offer">
+    <section class="section section-light">
       <div class="container">
-        <h2>What We Offer</h2>
-        <p>Training for real-life scenarios in a safe and controlled virtual environment.</p>
-        <div class="cards">
-          <article class="card">
+        <div class="section-heading">
+          <p class="eyebrow">What we offer</p>
+          <h2>Simulation tools for realistic, repeatable training.</h2>
+          <p>Build custom environments, interactive characters, and expert-guided learning experiences that match the needs of your organization.</p>
+        </div>
+        <div class="card-grid feature-grid">
+          <article class="feature-card">
+            <span class="card-icon">3D</span>
             <h3>3D Scene Creation</h3>
-            <p>Custom-built environments that simulate realistic scenarios.</p>
+            <p>Purpose-built virtual spaces that mirror real clinical, home care, and training settings.</p>
           </article>
-          <article class="card">
+          <article class="feature-card">
+            <span class="card-icon">IM</span>
             <h3>Interactive Models</h3>
-            <p>Responsive simulations to practice decision-making and skills.</p>
+            <p>Responsive scenarios that help teams practice communication, decision-making, and care routines.</p>
           </article>
-          <article class="card">
+          <article class="feature-card">
+            <span class="card-icon">PA</span>
             <h3>Personalized Avatars</h3>
-            <p>Avatars adapt to learners for realistic role-play.</p>
+            <p>Digital people and roles tailored to learner goals, care contexts, and situational complexity.</p>
           </article>
-          <article class="card">
+          <article class="feature-card">
+            <span class="card-icon">ES</span>
             <h3>Expert Support</h3>
-            <p>Guidance from domain experts to refine training outcomes.</p>
+            <p>Training design support from healthcare, AI, and product experts focused on measurable outcomes.</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="why">
+    <section class="section section-dark">
+      <div class="container split-section">
+        <div>
+          <p class="eyebrow">Why choose Replicare AI</p>
+          <h2>Designed for credible practice, not passive content.</h2>
+        </div>
+        <div class="why-list">
+          <article>
+            <h3>Tailored to your use case</h3>
+            <p>Scenario design can reflect the people, settings, risks, and workflows your learners actually encounter.</p>
+          </article>
+          <article>
+            <h3>Built for care teams</h3>
+            <p>Replicare AI combines immersive technology with a practical understanding of training, care delivery, and safety.</p>
+          </article>
+          <article>
+            <h3>Modern AI and VR foundation</h3>
+            <p>Interactive environments create active practice loops that are more memorable than static manuals or slide decks.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-muted">
       <div class="container">
-        <h2>Why Choose Replicare AI</h2>
-        <div class="cards four">
-          <article class="card">
-            <h3>A solution for you</h3>
-            <p>Tailored workflows and scenarios to meet your needs.</p>
+        <div class="section-heading">
+          <p class="eyebrow">Built for realistic practice</p>
+          <h2>Give learners a safer place to prepare.</h2>
+        </div>
+        <div class="card-grid three-column">
+          <article class="practice-card">
+            <h3>Safe training environments</h3>
+            <p>Practice high-pressure moments without putting patients, caregivers, or staff at risk.</p>
           </article>
-          <article class="card">
-            <h3>Personalized Service</h3>
-            <p>Hands-on support and customization with each engagement.</p>
+          <article class="practice-card">
+            <h3>Personalized learning experiences</h3>
+            <p>Adapt scenes, avatars, and objectives to learner needs, skill levels, and care situations.</p>
           </article>
-          <article class="card">
-            <h3>State-of-the-art</h3>
-            <p>Modern AI and VR techniques power our simulations.</p>
-          </article>
-          <article class="card">
-            <h3>Top-tier Support</h3>
-            <p>Committed to delivering outcomes and continuing care.</p>
+          <article class="practice-card">
+            <h3>Scalable virtual scenarios</h3>
+            <p>Deploy repeatable training experiences across teams, locations, and remote learning programs.</p>
           </article>
         </div>
       </div>
@@ -93,9 +156,15 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container">
-      <p>&copy; Replicare AI</p>
-      <nav aria-label="Footer">
+    <div class="container footer-grid">
+      <div>
+        <a class="brand footer-brand" href="index.html">
+          <span class="brand-mark" aria-hidden="true">R</span>
+          <span class="brand-text">Replicare AI</span>
+        </a>
+        <p>Immersive, personalized simulation training for healthcare and care teams.</p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
         <a href="about.html">About</a>
         <a href="blog.html">Blog</a>
         <a href="contact.html">Contact</a>
