@@ -378,10 +378,10 @@ p {
 
 .origin-light {
   position: absolute;
-  width: 34%;
+  width: 24%;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: radial-gradient(circle, #f4fbff 0 8%, #7ed9ee 9% 18%, rgba(6, 151, 183, 0.16) 19% 48%, transparent 49%);
+  background: radial-gradient(circle, #f4fbff 0 10%, #7ed9ee 11% 24%, rgba(6, 151, 183, 0.16) 25% 58%, transparent 59%);
   box-shadow: 0 0 90px rgba(126, 217, 238, 0.4);
   animation: origin-pulse 8s ease-in-out infinite;
 }
